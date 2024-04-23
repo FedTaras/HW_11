@@ -62,7 +62,7 @@ async function loadMorePhoto(e) {
 
 async function getImage(searchValue) {
   try {
-    const response = await axios(
+    const response = await axios.get(
       `${BASE_URL}?key=${API_KEY}&safesearch=true&orientation=horizontal&per_page=40&page=${page}&image_type=photo&q=${searchValue}`
     );
 
